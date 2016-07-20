@@ -15,7 +15,7 @@ public class Main {
 		BufferedReader is = new BufferedReader(new FileReader(file));
 		HashMap<String, Integer> alreadyChosenLetters = new HashMap<>();
 		
-		int random, timesGuessedWrong=0, j=0;
+		int random, timesGuessedWrong=0;
 		boolean win=false, guessWasRight = false, loose = false;
 		String line, usersGuess, tmp, chosenLetters;
 		String[] groeneBoekje =null, answer, wordToGuess= {". ",". ",". ",". ",". ",". "} ;
@@ -37,6 +37,8 @@ public class Main {
 		tmp = sixLetterWord.get(random);
 		answer = tmp.toLowerCase().split("");		// Let op moet eerst naar lowercase gemaakt worden anders krijg je een probleem met raden.
 		
+		System.out.println("\n" + wordToGuess[0] +wordToGuess[1]+ wordToGuess[2]+wordToGuess[3]+wordToGuess[4]+wordToGuess[5] + "\n");
+		System.out.println("Geef een letter op.");
 		usersGuess = scanner.next();
 		
 		while(!(win) || !loose){
